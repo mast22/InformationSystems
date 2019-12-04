@@ -1,0 +1,7 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    {% for order in object_list %}
+        <p><a href="{% url 'core:order-detail' order.pk %}">{{ order.name }}</a></p>
+    {% endfor %}
+{% endblock %}
